@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <link rel="stylesheet" href="static/appointment.css">
+    <style>
+        body
+        {
+        background-color: #ff80bf;
+        }
+    </style>
+    <!--<script type="text/javascript">
+            function showMessage() {
+                alert("successfully appontment confirmed");
+            }
+        </script>-->
+</head>
+<body>
+
+    <div class="container mt-4 p-4">
+      <div class="row">
+          <div class="col-md-6">
+              <h2 class="text-center my-4">
+                  Find Consultations
+              </h2>
+              <form method="POST">
+                  {% csrf_token %}
+                  <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4">
+                          Patient Name
+                      </label>
+                      <div class="col-sm-8 col-lg-8">
+                          <input type="text"id="patientname"class="form-control"
+                          placeholder="Name" name="patientname"required>
+                      </div>
+                  </div>
+                  <!---->
+                  <div class="form-group row">
+                      <br>
+                    <label class="col-sm-4 col-lg-4">
+                        Contact Number
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="tel"id="contactnum"class="form-control"
+                        placeholder="123" name="contactnum"required>
+                    </div>
+                </div>
+
+
+
+
+                <!---->
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                       Date
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <input type="date"id="date" name="date"class=form-control">
+                    </div>
+                </div>
+                <!---->
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-lg-4">
+                       Symptoms
+                    </label>
+                    <div class="col-sm-8 col-lg-8">
+                        <textarea id="symptoms" class="form-control"  name="symptoms" required ></textarea>
+                    </div>
+                </div>
+
+                  <br>
+<button type="submit" name="submit" value="submit" style="margin-left: 10px" >CONFIRM</button>
+                   <a href="/UserModule">BACK</a>
+
+              </form>
+
+</div>
+      </div>
+          </div>
+
+</body>
+</html>
+    <!--<style>
+
+
+
+    </style>
+</head>
+<body>
+
+
+ <nav class="navbar navbar-expand-lg nav-back fixed-top"
+    id="mainNav">
+      <div class="container">
+           <h2>APPOINTMENT FORM</h2>-->
+         <!-- <a class="navbar-brand" href="#">Medical</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button"
+           data-toggle="collapse" data-target="#navbarResponsive"
+           aria-controls="navbarResponsive" aria-expanded="false"
+           aria-label="Toggle navigation"><i class="fas fa-syringe fa-2x"></i>
+           </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link"
+                  href="/about">Services</a></li>
+                  <li class="nav-item"><a class="nav-link"
+                    href="/about">About</a></li>
+                  <li class="nav-item"><a class="nav-link"
+                    href="/about">Medical Camps</a></li>
+
+                  <li class="nav-item"><a class="nav-link"
+                    href="#signup">Contact</a></li>
+              </ul>-->
+         <!-- </div>
+      </div>
+  </nav>
+
+
+ <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative">
+      <h1>24/7 Care is available</h1>
+
+      <a href="/about" class="main-btn">Get Started</a>-->
+    <!--</div>
+  </section>
+
+
+<form method="POST">
+
+ {% csrf_token %}
+<br>
+
+<label for="patientname" >Patient Name: <span style="color: #FF6347">*</span></label><br>
+    <input id="patientname" type="text" name="patientname" >
+    <br><br>
+    <label for="age">Age:</label><input type="text" id="age" name="age">
+
+
+<br><br>
+    <label for="gender" style="margin-left: 10px;">Gender:</label>
+     <br><br>
+     Male<input id="male" type="radio" name="gender" value="male">
+     Female<input id="female" type="radio" name="gender" value="female">
+
+     Other<input id="other" type="radio" name="gender" value="other">
+
+<br><br>
+<label for="contactnum">Contact Number:</label>
+    <input type="text" id="contactnum" name="contactnum" >
+<br><br>
+<label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <br><br>
+    <label for="doctorname">Doctor Name:</label>
+    <input type="text" id="doctorname" name="doctorname">
+    <br><br>
+     <label for="date">Date:</label>
+    <input type="text" id="date" name="date"><br><br>
+
+    <button type="submit" id="submit" name="submit" style="margin-left: 10px" class="inputbutton">CONFIRM</button>
+
+</form>
+</div>
+</body>-->
+

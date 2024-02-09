@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+<!--<img align="right" src="static/images/member6.jpg">-->
+    <style>
+       body {
+  background: #3CC;
+   }
+   #logbox{
+  padding: 10px;
+  margin: 50px auto;
+  width: 340px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+h1 {
+  text-align: center;
+  font-size: 175%;
+  color: #757575;
+  font-weight: 300;
+}
+h1, input {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+
+.input {
+  width: 75%;
+
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #3CC !important;
+}
+.input:hover {
+  border-bottom-color: #dcdcdc;
+}
+.input:invalid {
+  box-shadow: none;
+}
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.inputButton {
+  position: relative;
+  width: 95%;
+  height: 60px;
+  display: block;
+  margin: 30px auto 30px;
+  color: white;
+  background-color: #3CC;
+  border: none;
+  -webkit-box-shadow: 0 5px 0 #2CADAD;
+  -moz-box-shadow: 0 5px 0 #2CADAD;
+  box-shadow: 0 5px 0 #2CADAD;
+}
+.inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 #2CADAD;
+}
+.inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+.inputButton:focus {
+  outline: none;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<form method="POST">
+    {% csrf_token %}
+<h1>New Doctor Registraion</h1>
+    <div class="col-md-6">
+           <div id="logbox">
+
+    <br>
+     <label for="specilization" style="margin-left: 10px;" class="input pass"> Specilization:</label>
+    <br>
+    <select id="specilization" name="specilization">
+        <option value="select">select</option>
+      <option value="Pediatrics">Pediatrics</option>
+      <option value="Gynecology">Gynecology</option>
+
+      <option value="ent">ENT</option>
+        <option value="cardiology"> Cardiology </option>
+        <option value="Nephrology"> Nephrology </option>
+    </select>
+
+    <br><br>
+    <label for="doctorname" style="margin-left: 10px;" class="input pass "> Doctor Name:</label><br>
+    <input type="text" id="doctorname" name="doctorname">
+     <br><br>
+    <label for="contactnum" style="margin-left: 10px; "class="input pass"> Contact Number:</label><br>
+    <input type="text" id="contactnum" name="contactnum">
+    <br><br>
+    <label for="age" style="margin-left: 10px;"class="input pass"> Age:</label>
+    <br>
+    <input type="text" id="age" name="age">
+    <br><br>
+     <label for="gender" style="margin-left: 10px;"class="input pass">Gender:</label>
+     <br><br>
+     Male<input id="male" type="radio" name="gender" value="male">
+     Female<input id="female" type="radio" name="gender" value="female">
+
+     Other<input id="other" type="radio" name="gender" value="other">
+
+    <br><br>
+   <label for="address" style="margin-left: 10px;"class="input pass">Address:</label>
+    <br>
+    <input type="text" id="address" name="address">
+    <br><br>
+    <label for="maritalstatus" style="margin-left: 10px;"class="input pass">Marital Status:</label>
+    <br>
+     <select id="maritalstatus" name="maritalstatus">
+         <option value="select">select </option>
+      <option value="Married">Married</option>
+      <option value="Single">Single</option>
+
+      <option value="Others">Others</option>
+
+    </select>
+
+
+    <!--<input type="text" id="maritalstatus" name="maritalstatus">-->
+     <br><br>
+    <label for="visittime" style="margin-left: 10px;"class="input pass">Visit Time:</label>
+    <br>
+    <input type="text" id="visittime" name="visittime">
+    <br><br>
+    <label for="days" style="margin-left: 10px;" class="input pass">Days:</label>
+    <br><input type="text" id="days" name="days">
+<br><br>
+       <label for="username" style="margin-left: 10px;" class="input pass">Username:</label>
+    <br><input type="text" id="username" name="username">
+               <br><br>
+               <label for="password" style="margin-left: 10px;" class="input pass">Password:</label>
+    <br><input type="password" id="password" name="password">
+               <br><br>
+    <button type="submit"  name="register" style="margin-left: 10px" class="inputButton">REGISTER</button>
+
+           </div>
+    </div>
+
+</form>
+</div>
+</div>
+</body>
+
+</html>

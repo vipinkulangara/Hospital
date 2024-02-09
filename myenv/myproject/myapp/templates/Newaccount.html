@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/newaccount.css">
+
+
+</head>
+<body>
+
+<form method="POST">
+    {% csrf_token %}
+    <section>
+
+  <div class="box">
+
+    <div class="square" style="--i:0;"></div>
+    <div class="square" style="--i:1;"></div>
+    <div class="square" style="--i:2;"></div>
+    <div class="square" style="--i:3;"></div>
+    <div class="square" style="--i:4;"></div>
+    <div class="square" style="--i:5;"></div>
+
+   <div class="container">
+    <div class="form">
+      <!--<h2>LOGIN</h2>-->
+      <form action="">
+         <div class="inputBx">
+         <!-- <input type="text" required="required" id="name" name="name">
+          <span>Name</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+          <div class="inputBx">
+          <input type="text" required="required" id="contactnum" name="contactnum">
+          <span>Contact Number</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+          <div class="inputBx">
+          <input type="text" required="required" id="mail" name="mail">
+          <span>Email</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="inputBx">
+          <input type="text" required="required" id="username" name="username">
+          <span>UserName</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="inputBx password">
+          <input id="password" type="password" name="password" required="required">
+          <span>Password</span>
+
+          <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+          <i class="fas fa-key"></i>
+        </div>
+          <div class="inputBx password">
+          <input id="confirmpassword" type="password" name="confirmpassword" required="required">
+          <span>Confirm Password</span>
+          </div>
+        <label class="remember"><input type="checkbox">
+          Remember</label>
+        <div class="inputBx">
+          <input type="submit" value="Log in">
+        </div>
+          <div class="inputBx">
+          <input type="submit" value="Clear">
+          </div>
+         <a href="/Mainmaster">Clear</a>
+
+
+      </form>
+      <p>Forgot password? <a href="#">Click Here</a></p>--->
+
+
+             <a href="/Signup">Login</a>
+
+      <p>Don't have an account <a href="/patientRegistration">Sign up</a></p>
+    <!--</div>
+  </div>
+
+  </div>-->
+</section>
+
+
+</form>
+
+</body>
+</html>

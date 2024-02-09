@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+        background-color:#2eb8b8;
+        }
+        h1 {
+  text-align: center;
+  font-size: 175%;
+  color: #757575;
+  font-weight: 300;
+}
+h1, input {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+       .inputButton {
+  position: relative;
+  width: 30%;
+  height: 60px;
+  display: block;
+  margin: 30px auto 30px;
+  color: white;
+  background-color:#993366;
+  border: none;
+
+  -moz-box-shadow: 0 5px 0 #2CADAD;
+  box-shadow: 0 5px 0 #2CADAD;
+}
+inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 #2CADAD;
+}
+.inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+.inputButton:focus {
+  outline: none;
+}
+
+#logbox{
+  padding: 10px;
+  margin: 50px auto;
+  width: 340px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+    </style>
+</head>
+<body>
+<form method="POST" action="/updateappointment/{{ result.id }}">
+    {% csrf_token %}
+<h1>Appointment</h1>
+    <br>
+    <div class="col-md-6">
+           <div id="logbox">
+
+    <h2>Patient Name:</h2> <input type="text" id="patientname" name="patientname" value="{{ result.patientname }}">
+
+    <h2>Contact Number:</h2> <input type="text" id="contactnum" name="contactnum" value="{{ result.contactnum }}">
+
+    <h2>Date:</h2><input type="date" id="date" name="date" value="{{ result.date }}">
+    <h2>Symptoms:</h2><input type="text" id="symptoms" name="symptoms" value="{{ result.symptoms }}">
+
+    <h2>Doctor Name:</h2><input type="text" id="doctorname" name="doctorname" value="{{ result.doctorname }}">
+<br><br>
+    <button type="submit" id="submit" name="register" class="inputButton">SAVE</button>
+           </div>
+    </div>
+</form>
+</body>
+</html>

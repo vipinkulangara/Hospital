@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link rel="stylesheet" href="static/table.css">
+
+    <style>
+body
+        {
+        background-color: background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+ font-family: 'Ubuntu', sans-serif;
+  background-position:center center;
+        }
+        table {
+    border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  table-layout: fixed;
+}
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+ th, td {
+    padding: 12px 15px;
+}
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+    </style>
+
+</head>
+<body>
+
+<h2>View Patient Details...</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Patient Name</th>
+        <th>Address</th>
+        <th>Patient Age</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Disease</th>
+        <th>Doctor Name</th>
+        <th>UserName</th>
+        <th>Password</th>
+        <th>Status</th>
+
+    </tr>
+    {% for result in result %}
+    <tr>
+        <td>{{ result.id }}</td>
+
+        <td>{{ result.patientname }}</td>
+        <td>{{ result.address }}</td>
+        <td>{{ result.age }}</td>
+        <td>{{ result.gender }}</td>
+        <td>{{ result.contactnum }}</td>
+        <td>{{ result.disease }}</td>
+        <td>{{ result.doctorname }}</td>
+        <td>{{ result.username }}</td>
+        <td>{{ result.password }}</td>
+        <td>{{ result.status }}</td>
+
+
+        <td><a href="editpatient/{{result.id}}"> EDIT</a></td>
+        <td><a href="deletepatient/{{result.id}}"> DELETE</a></td>
+
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+<a href="/home">Home page</a>
+</html>

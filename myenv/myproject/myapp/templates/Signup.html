@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.43);
+  border-radius: 20px;
+  margin: auto;
+  padding: 40px;
+  color: black;
+  box-sizing: border-box;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  }
+  button {
+  width: 150px;
+  margin-top: 25px;
+  margin-left: 80px;
+  border-radius: 18px;
+  font-size: 25px;
+  background-color: orange;
+  outline: none;
+  border:none;
+  box-sizing: border-box;
+  padding: 5px;
+  transition-duration:0.4s;
+
+}
+button:hover{
+  background-color: black;
+  color: orange;
+  border: 1px solid orange;
+
+}
+
+input[type=text],input[type=password]
+{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 10px 5px;
+    outline: none;
+    margin: auto;
+    margin-top: 15px;
+    border:none;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+  }
+
+
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+     background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+    </style>
+</head>
+<body>
+
+<form method="POST">
+    {% csrf_token %}
+    <h2>Username</h2><input type="text" id="username" name="username"><br>
+    <h2>Password</h2><input type="password" id="password" name="password"><br><br>
+    <button type="submit" id="submit" >Login</button>
+</form>
+
+</body>
+</html>
